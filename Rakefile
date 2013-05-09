@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-KwAdministrador::Application.load_tasks
+KwVanessaPrado::Application.load_tasks
