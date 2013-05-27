@@ -159,10 +159,7 @@ a:hover, a:active, a:focus {
 	position:relative;
 	padding: 10px 0;
 	background:#090906;
-	background-image:url(../images/bg_footer_left.jpg);
-	background-repeat:no-repeat;
-	background-position:bottom left;	
-	background-image: url(../images/bg_footer_left.jpg), url(../images/bg_footer_right.jpg);
+	background-image: url(../images/bg_footer_left.png), url(../images/bg_footer_right.png);
 	background-repeat: no-repeat;
 	background-position: bottom left, bottom right;
 	min-height:190px;
