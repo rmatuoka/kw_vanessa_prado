@@ -1,12 +1,17 @@
 .container {
-	background-image:url(/images/bg_revenda.jpg);
-	background-repeat:no-repeat;
+/*	background-image:url(/images/bg_revenda.jpg);
+	background-repeat:no-repeat;*/
 }
 .header {
 	background-image:url(/images/bg_header.png);
 }
 .menu {
 	border-bottom:none;
+}
+#back_bg{
+	max-height: 709px;
+	position: absolute;
+	width: 100%;
 }
 .content {
 	position:relative;
@@ -15,12 +20,12 @@
 }
 .content_box{
 	position:relative;
-	max-width:474px;
+	width:474px;
 	float:right;
-	width:auto;
+	/*width:auto;*/
 	text-align:center;
 	top:178px;
-	right:203px;
+	right:28%;
 }
 	.title_c_box
 	{
@@ -103,6 +108,9 @@ textarea{
 	color:#77a0b1;
 	font-weight:normal;		
 }
+textarea.error{
+	background-image:url(/images/bg_input_error.png) !important;	
+	}
 .ipt_marg{
 	margin-left:7px;
 }
@@ -139,6 +147,9 @@ input::-webkit-input-placeholder,::-webkit-input-placeholder, input::-moz-placeh
 }
 .bt_enviar_field{
 	margin-top:42px;
+}
+.show_box{
+	overflow: hidden;
 }
 ::-webkit-input-placeholder {
     color:#77a0b1;

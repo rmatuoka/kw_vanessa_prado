@@ -1,23 +1,35 @@
 <%content_for :head do%>
 <%=stylesheet_link_tag "internal"%>
+<%= javascript_include_tag "fullBg.js"%>
+<script type="text/javascript">
+$(window).load(function() {
+	$("#back_bg_img").fullBg();
+});
+</script>
 <% end %>
-<body>
-
+<div id="back_bg">
+	<%= image_tag "bg_agrife.jpg",:id=>"back_bg_img"%>
+</div>
   <div class="content">
    	<div class="content_box">
     	<span class="title_c_box">A Grife</span>
         <p class="text_c_box">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare nunc. Sed risus augue, gravida tincidunt venenatis non, mattis eget eros. Fusce bibendum nisl eu tellus vehicula vehicula. Etiam sit amet lorem at lacus vehicula lacinia ac ut diam. Nulla nulla tellus, porta ut feugiat sed, laoreet a enim. Nunc at sapien aliquet nisl viverra egestas at et eros. Sed lorem neque, molestie id vehicula vel, semper non est. Pellentesque vestibulum augue sit amet tellus fringilla quis tempus urna volutpat.
+			As mulheres. Esse é o principal elemento das criações Vanessa Prado.
+			Para isso, cada peça traz características e traços exclusivos, como o charme incomparável que cada mulher tem.
+			Sempre dentro de tendências internacionais, as coleções VP apresentam sempre novidades que podem chegar às clientes antes mesmo da tendência dominar o país.
+			Brincos, pulseiras, anéis e colares que não são apenas acessórios, mas itens indispensáveis para as mulheres. Que com certeza realçam e destacam ainda mais a beleza de cada uma.
         </p>
-        <img src="/images/img_dtl_agrife.png" width="49" height="15" />
+		<%= image_tag("img_dtl_agrife.png", :width=>"49", :height=>"15")%>
      </div>
     <div class="clear"></div>   	
 
     </div><!-- end .content -->
   <div class="footer">
   	<div class="f_track">
-   		<div class="f_track_text">Lorem Ipsum Dolor Sit Amet!</div>
+   		<div class="f_track_text">Inspiração E Processo Criativo!</div>
     </div>
     <div class="f_sub_text_track">
-		lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare nunc. Sed risus augue, gravida tincidunt venenatis non, mattis eget eros. Fusce bibendum nisl eu tellus vehicula vehicula. Etiam sit amet lorem at lacus vehicula lacinia ac ut diam. Nulla nulla tellus, porta ut feugiat sed, laoreet a enim. Nunc at sapien aliquet nisl viverra egestas at et eros. Sed lorem neque, molestie id vehicula vel, semper non est. Pellentesque vestibulum augue sit amet tellus fringilla quis tempus urna volutpat.    
+		Encontrar uma peça que traduza com precisão e fidelidade os desejos e as características de cada mulher é um processo que requer muito trabalho, dedicação e amor.
+		Por isso cada nova tendência precisa ser minuciosamente analisada e adaptada aos traços da mulher brasileira, uma das mais exigentes e detalhistas quando o assunto é moda.
+		O resultado desse trabalho pode ser visto em cada criação. A delicadeza de pedras especiais combinada à força da prata e à nobreza do ouro podem dar às peças o equilíbrio da perfeição de uma semijoia que consegue transmitir os mais diferentes sentimentos e desejos de uma mulher.
     </div>

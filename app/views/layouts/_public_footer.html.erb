@@ -1,7 +1,7 @@
 <div class="footer_content">
         <div class="footer_box drop_box_bottom">
         	<div class="f_content_box logo_footer">
-				<img src="/images/logo_bg.png" width="173" height="28" />              
+				<%= image_tag("logo_bg.png", :width=>"173", :height=>"28")%>             
             </div> 
       	</div>
         <div class="footer_box">
@@ -34,8 +34,8 @@
         <div class="footer_box f_b_adjust ">
         	<div class="f_content_box">
             	<div class="label_f_c_box">E-mail</div>
-                <div class="text_f_c_box" >	
-                    ola@vanessaprado.com.br
+                <div class="text_f_c_box" >
+					<%= link_to("contato@vanessaprado.com.br", "mailto:contato@vanessaprado.com.br")%>
                 </div>                
             </div> 
         </div> 

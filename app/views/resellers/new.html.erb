@@ -2,6 +2,7 @@
 <%=stylesheet_link_tag "revenda"%>
  <%=stylesheet_link_tag "custom_select"%>
 <%=javascript_include_tag "customSelect.jquery.min.js"%>
+<%= javascript_include_tag "fullBg.js"%>
 <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
  <script type="text/javascript">
 
@@ -9,38 +10,38 @@ $(document).ready(function() {
 		$(".custom_select select").customSelect();
 		
 		
-        $("#post_new").validate({
+        $("#new_resale").validate({
             rules:{
-                "post[name]":{
+                "resale[name]":{
                     required: true,
                     minlength: 3
                 },
-                "post[mail]": {
+                "resale[mail]": {
                     required: true,
                     email: true
                 },
-                cpf: {
+                "resale[cpf]": {
                     required: true
                 },	
-                rg: {
+                "resale[rg]": {
                     required: true
                 },							
-                endereco: {
+               	"resale[address]": {
                     required: true
                 },
-                bairro: {
+                "resale[hood]": {
                     required: true
                 },
-                cep: {
+                "resale[cep]": {
                     required: true
                 },	
-                cidade: {
+                "resale[city]": {
                     required: true
                 },
-                estado: {
+                "resale[state]": {
                     required: true
                 },	
-                comoconheceu: {
+                "resale[message]": {
                     required: true
                 },																	
                /* conf_senha:{
@@ -52,38 +53,37 @@ $(document).ready(function() {
 				*/
             },
             messages:{
-                "post[name]":{
-                    required: "<spam>* </spam>O campo nome é obrigatorio.",
-                    minlength: "O campo nome deve conter no mínimo 3 caracteres."
+                "resale[name]":{
+                    required: "",
+                    minlength: ""
                 },
-                "post[mail]": {
-                    required: "<spam>* </spam>O campo email é obrigatorio.",
-                    email: "O campo email deve conter um email válido."
+                "resale[mail]": {
+                    required: "",
+                    email: ""
                 },
-                cpf: {
-                    required: "O campo CPF é obrigatorio."
+                "resale[cpf]": {
+                    required: ""
                 },
-                rg: {
-                    required: "O campo RG é obrigatorio."
+                "resale[rg]": {
+                    required: ""
                 },									
-                endereco: {
-                    required: "O campo endereço é obrigatorio."
+                "resale[address]": {
+                    required: ""
                 },
-                bairro: {
-                    required: "O campo bairro é obrigatorio."
+                "resale[hood]": {
+                    required: ""
                 },	
-                cep: {
-                    required: "O campo cep é obrigatorio."
+                "resale[cep]": {
+                    required: ""
                 },
-                cidade: {
-                    required: "O campo cidade é obrigatorio."
+                "resale[city]": {
+                    required: ""
                 },
-                estado: {
-                    required: "O campo estado é obrigatorio."
+                "resale[state]": {
+                    required: ""
                 },																
-                conf_senha:{
-                    required: "O campo confirmação de senha é obrigatorio.",
-                    equalTo: "O campo confirmação de senha deve ser identico ao campo senha."
+                "resale[message]":{
+                    required: "",
                 },
                 /*termos: "Para se cadastrar você deve aceitar os termos de uso."*/
             }
@@ -135,44 +135,55 @@ $(document).ready(function() {
     }
 });
 
+$(window).load(function() {
+	$("#back_bg_img").fullBgZaba();
+});
+
+
+
 
 </script>
 <style>
 </style>
 <% end %>
+<div id="back_bg">
+	<%= image_tag "bg_revenda.jpg",:id=>"back_bg_img"%>
+</div>
+<%= form_for @reseller,  :url => resellers_path do |f|%>
 <div class="content">
    	<div class="content_box">
     	<span class="title_c_box">Revenda</span>
         <p class="text_c_box">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare nunc. Sed risus augue, gravida tincidunt venenatis non, mattis eget eros. Fusce bibendum nisl eu tellus vehicula vehicula. Etiam sit amet lorem at lacus vehicula lacinia ac ut diam. Nulla nulla tellus, porta ut feugiat sed, laoreet a enim. Nunc at sapien aliquet nisl viverra egestas at et eros. Sed lorem neque, molestie id vehicula vel, semper non est. Pellentesque vestibulum augue sit amet tellus fringilla quis tempus urna volutpat.
+			Você quer se juntar à Vanessa? Preencha o formulário abaixo e seja uma de nossas revendedoras. 
+			Ser uma revendedora VP é a maneira mais prazerosa de oferecer produtos com qualidade única, que certamente deixarão suas clientes muito satisfeitas.
+			Entre em contato e saiba mais sobre as coleções e peças exclusivas. Esperamos por você!
         </p>
-        <img src="/images/img_dtl_agrife.png" width="49" height="15">
-     </div>
+		<%image_tag("img_dtl_agrife.png", :width=>"49", :height=>"15")%>
+    </div>
     <div class="clear"></div> 
     <div class="box_transp_field">
-      <%=form_for @reseller, :as => "post", :url => resellers_path do |f|%>
         <%=f.text_field :name, :placeholder => "Nome", :id => "nome", :class => "input_big"%><br />
         <%=f.text_field :mail, :placeholder => "E-mail", :id => "email", :class => "input_big"%>          
     </div>
-    </div>
+ </div>
  <div class="footer">
     <%=image_tag("img_detail_form_rv.png", :width => "100%", :class => "img_dtail_form_rv")%>
     <div class="form_input">
-        <%=f.text_field :cpf, :placeholder => "CPF", :name => "cpf", :id => "cpf", :class => "input_med"%>
-        <%=f.text_field :rg, :placeholder => "RG", :name => "rg", :id => "rg", :class => "input_med ipt_marg"%>
+        <%=f.text_field :cpf, :placeholder => "CPF", :id => "cpf", :class => "input_med"%>
+        <%=f.text_field :rg, :placeholder => "RG", :id => "rg", :class => "input_med ipt_marg"%>
     </div>
     <%=image_tag("img_detail_form_rv.png", :width => "100%", :class => "img_dtail_form_rv")%>
     <div class="form_input">
-        <%=f.text_field :address, :placeholder => "Endereço", :name => "endereco", :id => "endereco", :class => "input_med"%>
-        <%=f.text_field :complement, :placeholder => "Complemento", :name => "complemento", :id => "complemento", :class => "input_med ipt_marg"%>
+        <%=f.text_field :address, :placeholder => "Endereço", :id => "endereco", :class => "input_med"%>
+        <%=f.text_field :complement, :placeholder => "Complemento", :id => "complemento", :class => "input_med ipt_marg"%>
     </div>
     <div class="form_input">
-        <%=f.text_field :hood, :placeholder => "Bairro", :name => "bairro", :id => "bairro", :class => "input_med"%>
-        <%=f.text_field :cep, :placeholder => "CEP", :name => "cep", :id => "cep", :class => "input_med ipt_marg"%> 
+        <%=f.text_field :hood, :placeholder => "Bairro", :id => "bairro", :class => "input_med"%>
+        <%=f.text_field :cep, :placeholder => "CEP", :id => "cep", :class => "input_med ipt_marg"%> 
     </div>
     <div class="form_input">
-        <%=f.text_field :city, :placeholder => "Cidade", :name => "cidade", :id => "cidade", :class => "input_med"%>
-        <%=f.text_field :state, :placeholder => "Estado", :name => "estado", :id => "estado", :class => "input_med ipt_marg"%> 
+        <%=f.text_field :city, :placeholder => "Cidade", :id => "cidade", :class => "input_med"%>
+        <%=f.text_field :state, :placeholder => "Estado", :id => "estado", :class => "input_med ipt_marg"%> 
     </div>
     <%=image_tag("img_detail_form_rv.png", :width => "100%", :class => "img_dtail_form_rv")%> 
     <div class="form_input">
