@@ -1,11 +1,11 @@
 <div class="container">
   <div class="header">
-      <div class="logo"><a href="./home.html"><img src="/images/logo.png" width="256" height="20" /></a></div>
+      <div class="logo"><%=link_to (image_tag ("logo.png", :width => "256", :height => "20")), root_path%></div>
       <div class="menu">
            <ul>
             <li><%=link_to "A Grife", brand_index_path%></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="./blog.html">Blog</a></li>
+            <li><%=link_to "Blog", posts_path%></li>
             <li><%=link_to "Revenda", resellers_path%></li>
            </ul>
            

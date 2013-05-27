@@ -1,0 +1,36 @@
+<% title "Admin/Post" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+<p>
+  <strong>Publication:</strong>
+  <%= @post.publication %>
+</p>
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+<p>
+  <strong>Source:</strong>
+  <%= @post.source %>
+</p>
+<p>
+  <strong>Published:</strong>
+  <%= @post.published %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @post.active %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_post_path(@post) %> |
+  <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_posts_path %>
+</p>

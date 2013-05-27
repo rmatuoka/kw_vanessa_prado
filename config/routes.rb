@@ -9,8 +9,10 @@ KwVanessaPrado::Application.routes.draw do
   resources :password_resets
   resources :atualizar
   resources :resellers
+  resources :posts
   #Inicio do namespace Admin
   namespace(:admin){
+    resources :posts
     resources :static_contents
     resources :users do
       collection do

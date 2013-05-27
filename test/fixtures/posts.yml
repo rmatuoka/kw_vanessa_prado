@@ -1,0 +1,17 @@
+one:
+  title: MyString
+  content: MyText
+  publication: 2013-05-27 10:20:29
+  author: MyString
+  source: MyString
+  published: false
+  active: false
+
+two:
+  title: MyString
+  content: MyText
+  publication: 2013-05-27 10:20:29
+  author: MyString
+  source: MyString
+  published: false
+  active: false
