@@ -3,7 +3,7 @@ class ResellerMailer < ActionMailer::Base
   
   def send_reseller_to_adm(reseller)
     @reseller = reseller
-    mail(:to => "log@korewa.com.br",:bcc => "log@korewa.com.br",:subject => "Vanessa Prado - Novo Contato Revendedor")
+    mail(:to => "contato@vanessaprado.com.br", :bcc => "log@korewa.com.br", :reply_to=> @reseller.mail, :subject => "Vanessa Prado - Novo Contato Revendedor")
   end
   
 end
