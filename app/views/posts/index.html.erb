@@ -7,19 +7,19 @@
         <div class="search_c_blog">
 			<input type="text" width="715" height="62" placeholder="Buscar por ...">
         </div>
+        <% @posts.each do |post| %>
         <div class="item_blog">
             <div class="date_item">
-                <span class="day_date">10</span><br>
+                <span class="day_date"><%= I18n.localize(post.publication, :format => :short)%> </span><br>
                 <span class="month_year_date">04/13</span>
             </div>
         	<div class="item_content"> 
-                <h2 class="title_item">Lorem Ipsum Dolor Sit Amet!</h2>
+                <h2 class="title_item"><%= post.title%></h2>
                 <img src="/images/img_detail_blog_content.png" width="64" height="15" class="img_blog_align">
                 <p class="text_item">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare nunc. Sed risus augue, gravida tincidunt venenatis non, mattis eget eros. Fusce bibendum nisl eu tellus vehicula vehicula. Etiam sit amet lorem at lacus vehicula lacinia ac ut diam. Nulla nulla tellus, porta ut feugiat sed, laoreet a enim. Nunc at sapien aliquet nisl viverra egestas at et eros. Sed lorem neque, molestie id vehicula vel, semper non est. Pellentesque vestibulum augue sit amet tellus fringilla quis tempus urna volutpat.            
+                  <%= post.content%>
                 </p>
-                    
-                <a href="./blog_interna.html" class="link_see_more">Leia mais!</a>                
+                <%=link_to "Leia Mais!", post_path(post.id), :class => "link_see_more"%>               
                 <hr color="d0d0d0" width="232" class="hr_line">
                 <div class="clear"></div>
             </div> 
@@ -27,6 +27,7 @@
         </div>
         
         <hr color="d7dee1" class="" style="max-width:731px;">
+        <%end%>
         <div class="pagination">
         	<span class="previus_page">Anterior</span>
         	<span class="pagination_numbers">
