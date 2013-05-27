@@ -156,29 +156,20 @@ a:hover, a:active, a:focus {
 
 /* ~~ footer ~~ */
 .footer {
-z-index: 2000;
 	position:relative;
 	padding: 10px 0;
 	background:#090906;
 	background-image:url(../images/bg_footer_left.jpg);
 	background-repeat:no-repeat;
 	background-position:bottom left;	
+	background-image: url(../images/bg_footer_left.jpg), url(../images/bg_footer_right.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom left, bottom right;
 	min-height:190px;
 	height:auto;
 	width:auto;
 }
-.footer_bg_right {
-z-index: 1000;
-	position:absolute;
-	right:0px;
-	bottom:0px;
-	background-image:url(../images/bg_footer_right.jpg);
-	background-repeat:no-repeat;
-	background-position:bottom right;
-	width:68px;
-	height:293px;
 
-}
 
 .footer_high_box {
 	position:relative;
