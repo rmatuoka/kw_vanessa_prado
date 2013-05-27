@@ -160,12 +160,15 @@ input::-webkit-input-placeholder,::-webkit-input-placeholder, input::-moz-placeh
 	font-family:oranienbaumregular;	
 	margin-top:60px;	
 }
-.pagination_numbers{
+.pagination a{
 	position:relative;
 	margin:0 auto;
 	min-width:10px;
+  cursor:pointer;
+	font-size:26px;
+	color:#b6c7ce;
 }
-.pagination_numbers a{
+.pagination .current{
 	cursor:pointer;
 	font-size:26px;
 	color:#b6c7ce;
@@ -174,21 +177,21 @@ input::-webkit-input-placeholder,::-webkit-input-placeholder, input::-moz-placeh
 .current {
 	text-decoration:underline !important;	
 }
-.previus_page{
-	position:relative;
-	cursor:pointer;
-	font-size:22px;
-	color:#cfb59d;
-	float:left;
-	margin-left:20px;
+.prev_page{
+	position:relative !important;
+	cursor:pointer !important;
+	font-size:22px !important;
+	color:#cfb59d !important;
+	float:left !important;
+	margin-left:20px !important;
 	}
 .next_page{
-	position:relative;
-	cursor:pointer;
-	font-size:22px;
-	color:#cfb59d;
-	float:right;
-	margin-right:20px;
+	position:relative !important;
+	cursor:pointer !important;
+	font-size:22px !important;
+	color:#cfb59d !important;
+	float:right !important;
+	margin-right:20px !important;
 	}
 .text_content{
 	position:relative;
