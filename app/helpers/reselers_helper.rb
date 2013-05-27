@@ -1,0 +1,2 @@
+module ReselersHelper
+end

@@ -1,0 +1,72 @@
+<%content_for :head do%>
+<%= javascript_include_tag "responsiveslides.min.js"%>
+<%=stylesheet_link_tag "responsiveslides.css"%>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	var nav = $('.header');   
+	$(window).scroll(function () { 
+		if ($(this).scrollTop() > 71) { 
+			nav.addClass("header_bg"); } 
+		else { 
+			nav.removeClass("header_bg"); 
+		} });	
+		
+	$(window).scroll(function () {
+	  $(".header111").css("background-image", "url(/images/bg_header.png)");
+	  $(".header111").addClass("header_bg");
+	});
+		
+	$("#slider4").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+
+
+
+});
+	
+</script>
+<% end %><div class="content">
+    <div class="callbacks_container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="/images/destaque.jpg" alt="">
+          <p class="caption">Lorem Ipsum Dolor<br />
+          	<span class="caption_sub">Lorem Ipsum Dolor</span>
+          </p>
+        </li>
+        <li>
+          <img src="/images/destaque_2.jpg" alt="">
+          <p class="caption">2Lorem Ipsum Dolor2</p>
+        </li>
+        <li>
+          <img src="/images/destaque.jpg" alt="">
+          <p class="caption">3Lorem Ipsum Dolor3</p>
+        </li>
+      </ul>
+    </div>
+              
+
+       
+        <div class="clear"></div>   	
+
+    </div><!-- end .content -->
+<div class="footer">
+<div class="footer_high_box">
+    	<h1 class="title_high_box">Lorem Ipsum Dolor Sit Amet</h1>
+        <hr class="line_hbx">
+        <p class="text_high_box">
+			“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ornare nunc. Sed risus augue, gravida tincidunt venenatis non, mattis eget eros. Fusce bibendum nisl eu tellus vehicula vehicula. Etiam sit amet lorem at lacus vehicula lacinia ac ut diam. Nulla nulla tellus, porta ut feugiat sed, laoreet a enim. Nunc at sapien aliquet nisl viverra egestas at et eros. Sed lorem neque, molestie id vehicula vel, semper non est. Pellentesque vestibulum augue sit amet tellus fringilla quis tempus urna volutpat.”        	
+        </p>
+    </div>

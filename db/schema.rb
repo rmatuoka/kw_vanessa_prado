@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004192741) do
+ActiveRecord::Schema.define(:version => 20130523192242) do
+
+  create_table "resales", :force => true do |t|
+    t.string   "name"
+    t.string   "mail"
+    t.string   "cpf"
+    t.string   "rg"
+    t.string   "address"
+    t.string   "complement"
+    t.string   "hood"
+    t.string   "cep"
+    t.string   "city"
+    t.string   "state"
+    t.text     "message"
+    t.string   "region"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name",              :limit => 40

@@ -1,0 +1,135 @@
+
+.container {
+	background-image:url(../images/bg_agrife.jpg);
+
+}
+
+.header {
+	background-image:url(../images/bg_header.png);
+}
+.menu {
+	border-bottom:none;
+}
+.content {
+	position:relative;
+	height:708px;
+	
+}
+.content_box{
+	position:relative;
+	max-width:474px;
+	width:auto;
+	text-align:center;
+	top:262px;
+	left:206px;
+}
+	.title_c_box
+	{
+		font-family:oranienbaumregular;
+		font-size:36px;
+		color:#fff;
+		font-weight:normal;	
+	}
+	.text_c_box
+	{
+		font-family:fabricaregular;
+		font-size:11px;
+		color:#36362f;
+		font-weight:normal;
+		margin-top:40px;
+		margin-bottom:40px;
+	}
+.f_track{
+	position:relative;
+	max-width:696px;
+	width:auto;
+	height:109px;
+	background-image:url(../images/bg_f_track.png);
+	background-repeat:no-repeat;
+	background-position:center top;	
+	background-size:100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	-khtml-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	margin:0 auto;	
+	
+}
+	.f_track_text{
+		max-width:440px;
+		font-family:lavanderia_regularregular;
+		font-size: 42px;
+		text-shadow: 6px 4px 21px black;
+		color: #fff;
+		padding-top:20px;
+		margin:-75px auto;	
+		
+		
+	}
+	
+.f_sub_text_track{
+	position:relative;
+	font-family:fabricaregular;
+	font-size:11px;
+	color:#5a5a5a;
+	font-weight:normal;
+	text-align:center;
+	min-height:71px;
+	height:auto;
+	max-width:800px;
+	width:auto;
+	margin:0 auto;
+	margin-top:63px;
+	margin-bottom:101px;		
+}
+@media only screen and (max-width: 870px)
+{
+	.content {
+		height: 536px;
+	}		
+	.content_box{
+		left:0px;
+		margin:0 auto;
+	}
+	.content_box{
+		top:200px;
+		left:0px;
+		margin:0 auto;
+	}		
+}
+@media only screen and (max-width: 575px)
+{
+	.f_track_text{
+		font-size:35px;	
+		max-width:355px;
+	}	
+}
+@media only screen and (max-width: 480px)
+{
+	
+	.content {
+		height: 436px;
+	}		
+	.content_box{
+		top:100px;
+		left:0px;
+		margin:0 auto;
+	}
+.f_track{
+	
+}
+.f_track_text{
+	font-size:24px;	
+	max-width: 246px;
+	padding-top:30px;
+}
+
+}
+@media only screen and (max-width: 320px)
+{
+.f_track_text{
+	font-size:19px;	
+	max-width: 192px;
+	padding-top:30px;
+}	
+}

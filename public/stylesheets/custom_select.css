@@ -1,0 +1,56 @@
+/* Select Box */
+.custom_select{
+	float:left;
+	width:399px;
+	margin-left:9px;
+	height:64px !important;
+	}
+
+select
+{
+    width:388px !important;
+	height:64px ;
+    border:1px solid #c7cdd0;
+    background:#fff;
+	width:388px;	
+	font-family: oranienbaumregular;
+	font-size: 24px;
+	color: #77a0b1;
+	font-weight: normal;	
+	
+    }
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	select {  }
+}
+body:first-of-type table.content { /* Safari */
+	 top:40px; !important;
+}
+span.customSelect 
+{
+    font-size:11px;
+	width:362px;
+	padding-top: 18px;
+	padding-left: 26px;
+	padding-bottom: 14px;
+    background: #transparent;
+    color:#7c7c7c;
+    border:1px solid #transparent;
+	background:url(../images/bg_select_input.png) no-repeat center right;
+	font-family: oranienbaumregular;
+	font-size: 24px;
+	color: #77a0b1;
+	font-weight: normal;
+	text-align:left;		
+}	
+   
+     
+span.customSelect.changed 
+{
+    background-color: #transparent;
+    }
+     
+.customSelectInner 
+{
+
+     }
+     
