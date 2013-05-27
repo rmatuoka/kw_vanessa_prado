@@ -10,8 +10,8 @@
         <% @posts.each do |post| %>
         <div class="item_blog">
             <div class="date_item">
-                <span class="day_date"><%= I18n.localize(post.publication, :format => :short)%> </span><br>
-                <span class="month_year_date">04/13</span>
+                <span class="day_date"><%= I18n.localize(post.publication, :format => :blog_day)%></span><br>
+                <span class="month_year_date"><%= I18n.localize(post.publication, :format => :blog_m_y)%></span>
             </div>
         	<div class="item_content"> 
                 <h2 class="title_item"><%= post.title%></h2>
@@ -19,7 +19,7 @@
                 <p class="text_item">
                   <%= post.content%>
                 </p>
-                <%=link_to "Leia Mais!", post_path(post.id), :class => "link_see_more"%>               
+                <%=link_to "Leia mais!", post_path(post.id), :class => "link_see_more"%>               
                 <hr color="d0d0d0" width="232" class="hr_line">
                 <div class="clear"></div>
             </div> 
@@ -28,18 +28,7 @@
         
         <hr color="d7dee1" class="" style="max-width:731px;">
         <%end%>
-        <div class="pagination">
-        	<span class="previus_page">Anterior</span>
-        	<span class="pagination_numbers">
-            	<a>1</a>
-                <a>2</a>
-                <a class="current">3</a>
-                <a>4</a>
-                <a>5</a>
-                <a>...</a>
-            </span>
-            <span class="next_page">Próxima</span>
-        </div>
+          <%= will_paginate @posts%>
     </div>
     <div class="clear"></div>   	
 	<div class="text_content">

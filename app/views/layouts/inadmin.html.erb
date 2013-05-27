@@ -19,14 +19,13 @@
 <%= javascript_include_tag "menuadmin.js" %>
 <%= javascript_include_tag "jquery.tablesorter.min.js" %>
 <%= javascript_include_tag "jquery.foundation.alerts.js" %>
-
-
+<%= include_tiny_mce_if_needed %>
+<%=yield :head%>
 <script>
 jQuery(document).ready(function() 
-    { 
-	//	jQuery("li:first.parent > a").trigger('click');
+    {
 		$(document).foundationAlerts();
-        jQuery("table").tablesorter(); 
+        $("table").tablesorter(); 
     } 
 );
 </script>
@@ -58,12 +57,7 @@ jQuery(document).ready(function()
 <div id="Footer" class="twelve columns">
 	<%=render :file => "layouts/_footer.html.erb"%>
 </div>
-<!-- Included JS Files (Compressed) -->
-<script src="javascripts/jquery.js"></script>
-<script src="javascripts/foundation.min.js"></script>
 
-<!-- Initialize JS Plugins -->
-<script src="javascripts/app.js"></script>
 
 
 <script>
