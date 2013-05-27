@@ -10,7 +10,7 @@
         <% @posts.each do |post| %>
         <div class="item_blog">
             <div class="date_item">
-                <span class="day_date"><%= I18n.localize(post.publication, :format => :short)%> </span><br>
+                <span class="day_date"><%= I18n.localize(post.publication, :format => :bday)%> </span><br>
                 <span class="month_year_date">04/13</span>
             </div>
         	<div class="item_content"> 
