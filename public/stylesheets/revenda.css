@@ -111,6 +111,9 @@ textarea{
 textarea.error{
 	background-image:url(/images/bg_input_error.png) !important;	
 	}
+select.error{
+	background-image:url(/images/bg_input_error.png) !important;	
+	}	
 .ipt_marg{
 	margin-left:7px;
 }

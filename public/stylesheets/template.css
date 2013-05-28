@@ -107,6 +107,9 @@ a:hover, a:active, a:focus {
 		border-bottom:#FFF 3px solid;		
 		float:right;
 	}
+	.header_bg .menu{
+		border-bottom:none !important;		
+	}	
 		.menu ul{
 			float:left;
 			list-style:none;

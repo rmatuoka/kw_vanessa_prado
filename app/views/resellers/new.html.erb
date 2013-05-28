@@ -43,6 +43,9 @@ $(document).ready(function() {
                 },	
                 "resale[message]": {
                     required: true
+                },
+                "resale[region]": {
+                    required: true
                 },																	
                /* conf_senha:{
                     required: true,
@@ -83,6 +86,9 @@ $(document).ready(function() {
                     required: ""
                 },																
                 "resale[message]":{
+                    required: "",
+                },
+                "resale[region]":{
                     required: "",
                 },
                 /*termos: "Para se cadastrar você deve aceitar os termos de uso."*/
@@ -189,7 +195,7 @@ $(window).load(function() {
     <div class="form_input">
       <%=f.text_area :message, :placeholder => "Como nos conheceu?"%>
         <div class="custom_select ipt_marg">
-          <%=f.select(:region, options_for_select([['Região que deseja atuar',''],['Região 1'],['Região 2'],['Região 3']]))%>                     
+          <%=f.select :region, options_for_select([['Pouso Alegre - MG'],['Bragança Pta. - SP'],['Atibaia - SP']]), {:include_blank => "Escolha"}%>                     
         </div>
     </div> 
     <div class="clear"></div> 
