@@ -1,5 +1,7 @@
 KwVanessaPrado::Application.routes.draw do
 
+  get "releases/index"
+
   get "brand/index"
 
   get "home/index"

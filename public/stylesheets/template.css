@@ -95,7 +95,7 @@ a:hover, a:active, a:focus {
 	.logo{
 		position:relative;
 		float:left;
-		width:256px;
+		width:332px;
 		height:40px;
 		position:relative;
 		margin-left:20px;
@@ -103,8 +103,9 @@ a:hover, a:active, a:focus {
 	}
 	.menu{
 		position:relative;
-		width:595px;
-		border-bottom:#FFF 3px solid;		
+		max-width:647px;
+		border-bottom:#FFF 3px solid;
+		padding-left:42px;		
 		float:right;
 	}
 	.header_bg .menu{
@@ -233,7 +234,7 @@ a:hover, a:active, a:focus {
 	width:299px;
 	float:left;
 	height:auto;
-	min-height:105px;
+	min-height:119px;
 	border-right:#292929 1px solid;		
 }
 .f_b_adjust {
@@ -241,7 +242,11 @@ a:hover, a:active, a:focus {
 	border-right:none;		
 }
 .logo_footer{
-	padding-top:22px;
+	padding-top:0px;
+}
+.logo_S7_footer_align{
+	text-align:center;
+	margin:0 auto;	
 }
 	.f_content_box{
 		width:225px;
@@ -284,9 +289,74 @@ a:hover, a:active, a:focus {
 	font-size: 1px;
 	line-height: 0px;
 }
--->
+
+
+@media only screen and (max-width: 1199px)
+{
+	.footer_content_box{
+		margin:0 auto;
+		margin-left: 17px;
+	}
+	.footer_box{
+		width:258px;
+	}
+
+
+}
+
+@media only screen and (max-width: 1044px)
+{
+	.footer_content_box{
+		margin:0 auto;
+		margin-left: 17px;
+	}
+.footer_box {
+width: 218px;
+}
+.f_content_box {
+	width: 225px;
+	margin: 0 auto;
+	min-height: 35px;
+	height: auto;
+	margin-top: 17px;
+	margin-left: 12px;
+}
+
+}
+@media only screen and (max-width: 900px)
+{
+
+	.footer_box {
+		float: none;
+	}
+	
+	.footer_box{
+		border:none;
+		border-top:#292929 1px solid;	
+		float:none;
+		width:100%;
+		margin:0 auto;
+	}
+	.f_content_box {
+	margin:32px auto;
+	
+	}
+	.f_b_adjust {
+		margin-bottom:100px;	
+	}
+	.drop_box_bottom{
+		display:block;
+		position:absolute;
+		bottom: -106px;
+		text-align: center;
+	}	
+	.f_b_adjust {
+	margin-top:20px;
+	}
+}
 @media only screen and (max-width: 870px)
 {
+
 	.header{
 
 	}
@@ -294,6 +364,9 @@ a:hover, a:active, a:focus {
 		 height:auto;
 		 min-height:68px;
 		 width:auto;
+	}
+		.menu{
+		max-width:547px;
 	}
 }
 @media only screen and (max-width: 768px)
@@ -316,7 +389,14 @@ a:hover, a:active, a:focus {
 	}
 	.header{
 		position:relative;	
-	}	
+	}
+	.logo{
+		height: 55px;
+	}
+	.menu{
+		 min-height:68px;
+		 width:100%;
+	}		
 .header_bg {
 	position:relative !important;
 	background:none !important;
@@ -363,6 +443,7 @@ a:hover, a:active, a:focus {
 	}
 	.menu{
 		float:none;
+		padding-left:0px;
 	}
 		.menu ul{
 			width:100%;

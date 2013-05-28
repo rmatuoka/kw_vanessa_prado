@@ -1,0 +1,31 @@
+<%content_for :head do%>
+<%=stylesheet_link_tag "lancamentos"%>
+ <%=stylesheet_link_tag "custom_select"%>
+<%=javascript_include_tag "customSelect.jquery.min.js"%>
+<%= javascript_include_tag "fullBg.js"%>
+<script type="text/javascript">
+
+$(window).load(function() {
+	$("#back_bg_img").fullBgZaba();
+	$(".container").addClass("show_box");
+});
+
+</script>
+<% end %>
+<div id="back_bg">
+	<%= image_tag "bg_revenda.jpg",:id=>"back_bg_img"%>
+</div>
+<div class="content">
+	<div class="content_box">
+		<span class="title_c_box"><Revenda>Agradecemos o Interesse<%#= @reseller.name %></span>
+		<p class="text_c_box">
+			Sua mensagem foi enviada, em breve entraremos em contato.
+		</p>
+		<%image_tag("img_dtl_agrife.png", :width=>"49", :height=>"15")%>
+	</div>
+	<div class="clear"></div> 
+
+</div>
+<div class="footer show">
+<%=image_tag("img_detail_form_rv.png", :width => "100%", :class => "img_dtail_form_rv")%>
+
