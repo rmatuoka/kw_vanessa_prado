@@ -12,20 +12,49 @@ $(window).load(function() {
 
 </script>
 <% end %>
-<div id="back_bg">
-	<%= image_tag "bg_revenda.jpg",:id=>"back_bg_img"%>
-</div>
 <div class="content">
-	<div class="content_box">
-		<span class="title_c_box"><Revenda>Agradecemos o Interesse<%#= @reseller.name %></span>
-		<p class="text_c_box">
-			Sua mensagem foi enviada, em breve entraremos em contato.
-		</p>
-		<%image_tag("img_dtl_agrife.png", :width=>"49", :height=>"15")%>
-	</div>
-	<div class="clear"></div> 
+   <div class="box_lancamentos">
+        <div class="left_box">
+            <div class="img_box">
+				<%=image_tag("img_1.jpg",:width=>"287",:height=>"361")%>
+				<div class="name_prod"><span>Nome do produto</span></div>
+            </div>
+            <div class="img_box align_img_box">
+				<%=image_tag("img_3.jpg",:width=>"287",:height=>"277")%>
+                <div class="name_prod"><span>Nome do produto</span></div>
+            </div>
+        </div>
+        <div class="right_box">
+            <div class="top_right">
+                <div class="img_box">
+                    <%=image_tag("img_2.jpg", :width=>"100%")%>
+                    <div class="name_prod"><span>Nome do produto</span></div>
+                </div>
+            </div>
+            <div class="bottom_right">
+                <div class="left_br">
+                    <div class="img_box">
+                        <%=image_tag("img_4.jpg",:width=>"287",:height=>"277")%>
+                        <div class="name_prod"><span>Nome do produto</span></div>
+                    </div>
+                    <div class="img_box">
+						<%=image_tag("img_5.jpg",:width=>"287",:height=>"162")%>
+                        <div class="name_prod"><span>Nome do produto</span></div>
+                    </div>
+                </div>	
+                <div class="right_br">
+                    <div class="img_box">
+                        <%=image_tag("img_6.jpg", :width=>"100%")%>
+                        <div class="name_prod"><span>Nome do produto</span></div>
+                    </div>
+                </div>	
+            </div>
+        </div>
+   </div>
+   <div class="clear"></div>
+   <%=image_tag("img_line_lancamentos.png",:width=>"100%",:style=>"max-width:999px;margin-top:64px;margin-bottom:64px;")%>
+   
 
 </div>
 <div class="footer show">
-<%=image_tag("img_detail_form_rv.png", :width => "100%", :class => "img_dtail_form_rv")%>
 
