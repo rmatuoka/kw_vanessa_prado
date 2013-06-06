@@ -1,6 +1,8 @@
-.container {
-/*	background-image:url(/images/bg_revenda.jpg);
-	background-repeat:no-repeat;*/
+body {
+	background-image:url(/images/bg_revenda.jpg);
+	background-repeat:no-repeat;
+	background-position:-646px 0px;
+	background-size:auto;
 }
 .header {
 	background-image:url(/images/bg_header.png);
@@ -9,6 +11,8 @@
 	border-bottom:none;
 }
 #back_bg{
+	overflow-x:hidden;
+	overflow-y:hidden;
 	max-height: 709px;
 	position: absolute;
 	width: 100%;
@@ -20,7 +24,7 @@
 }
 .content_box{
 	position:relative;
-	width:474px;
+	max-width:474px;
 	float:right;
 	/*width:auto;*/
 	text-align:center;
@@ -186,12 +190,17 @@ input::-webkit-input-placeholder,::-webkit-input-placeholder, input::-moz-placeh
 		margin-left:2px !important;
 	}
 }
+@media only screen and (max-width: 555px)
+{
+	#back_bg{
+		display:none !important;
+	}
+}
 @media only screen and (max-width: 575px)
 {
     .input_big{
 		width:400px !important;
 	}	
-
 }
 @media only screen and (max-width: 480px)
 {

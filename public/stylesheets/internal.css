@@ -11,6 +11,8 @@
 	border-bottom:none;
 }
 #back_bg{
+	overflow-x:hidden;
+	overflow-y:hidden;
 	max-height: 709px;
 	position: absolute;
 	width: 100%;
@@ -22,7 +24,7 @@
 }
 .content_box{
 	position:relative;
-	width:474px;
+	max-width:474px;
 	text-align:center;
 	top:262px;
 	left: 28%;
@@ -109,6 +111,10 @@
 		font-size:35px;	
 		max-width:355px;
 	}	
+	#back_bg{
+	border:red 1px solid;
+		display:none !important;
+	}
 }
 @media only screen and (max-width: 480px)
 {

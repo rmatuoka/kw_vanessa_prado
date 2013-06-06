@@ -338,7 +338,7 @@ width: 218px;
 		margin:0 auto;
 	}
 	.f_content_box {
-	margin:32px auto;
+	margin: 16px auto;
 	
 	}
 	.f_b_adjust {
@@ -395,8 +395,15 @@ width: 218px;
 	}
 	.menu{
 		 min-height:68px;
-		 width:100%;
-	}		
+		 float:none;
+		 padding-left: 0px;
+		 width:0 auto;
+		 
+	}	
+	
+	.menu ul{
+	 float:none;
+	}
 .header_bg {
 	position:relative !important;
 	background:none !important;
