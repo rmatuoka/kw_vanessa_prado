@@ -5,147 +5,6 @@
 <%= javascript_include_tag "fullBg.js"%>
 <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-		$(".custom_select select").customSelect();
-		
-		
-        $("#new_resale").validate({
-            rules:{
-                "resale[name]":{
-                    required: true,
-                    minlength: 3
-                },
-                "resale[mail]": {
-                    required: true,
-                    email: true
-                },
-                "resale[cpf]": {
-                    required: true
-                },	
-                "resale[rg]": {
-                    required: true
-                },
-                "resale[phone]": {
-                    required: true
-                },
-               	"resale[address]": {
-                    required: true
-                },
-                "resale[hood]": {
-                    required: true
-                },
-                "resale[cep]": {
-                    required: true
-                },	
-                "resale[city]": {
-                    required: true
-                },
-                "resale[state]": {
-                    required: true
-                },	
-                "resale[message]": {
-                    required: true
-                },
-                "resale[region]": {
-                    required: true
-                },																	
-               /* conf_senha:{
-                    required: true,
-                    equalTo: "#senha"
-                },
-				
-                termos: "required"
-				*/
-            },
-            messages:{
-                "resale[name]":{
-                    required: "",
-                    minlength: ""
-                },
-                "resale[mail]": {
-                    required: "",
-                    email: ""
-                },
-                "resale[cpf]": {
-                    required: ""
-                },
-                "resale[rg]": {
-                    required: ""
-                },
-                "resale[phone]": {
-                    required: ""
-                },
-                "resale[address]": {
-                    required: ""
-                },
-                "resale[hood]": {
-                    required: ""
-                },	
-                "resale[cep]": {
-                    required: ""
-                },
-                "resale[city]": {
-                    required: ""
-                },
-                "resale[state]": {
-                    required: ""
-                },																
-                "resale[message]":{
-                    required: "",
-                },
-                "resale[region]":{
-                    required: "",
-                },
-                /*termos: "Para se cadastrar você deve aceitar os termos de uso."*/
-            }
-
-        });
-		
-		
-
-
-    // Only do anything if the browser does not support placeholders
-    if (!Modernizr.input.placeholder) {
-
-        // Format all elements with the placeholder attribute and insert it as a value
-        $('[placeholder]').each(function() {
-            if ($(this).val() == '') {
-                $(this).val($(this).attr('placeholder'));
-                $(this).addClass('placeholder');
-            }
-            $(this).focus(function() {
-                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
-                    $(this).val('');
-                    $(this).removeClass('placeholder');
-                }
-            }).blur(function() {
-                if($(this).val() == '') {
-                    $(this).val($(this).attr('placeholder'));
-                    $(this).addClass('placeholder');
-                }
-            });
-        });
-
-        // Clean up any placeholders if the form gets submitted
-        $('[placeholder]').parents('form').submit(function() {
-            $(this).find('[placeholder]').each(function() {
-                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
-                    $(this).val('');
-                }
-            });
-        });
-
-        // Clean up any placeholders if the page is refreshed
-        window.onbeforeunload = function() {
-            $('[placeholder]').each(function() {
-                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
-                    $(this).val('');
-                }
-            });
-        };
-    }
-});
-
 $(window).load(function() {
 	$("#back_bg_img").fullBgZaba();
 });
@@ -209,5 +68,185 @@ $(window).load(function() {
       <%=image_submit_tag("bt_enviar.jpg", :width => "186", :height => "72", :class => "bt_enviar_field")%>
     </div>
   <%end%>
+<script>
+$(document).ready(function() {
 
+/* Mascaras personalizadas */ 
+$.mask.masks = $.extend($.mask.masks,{
+
+   phone_sp:{ mask: '(99) 99999-9999'}
+
+});
+
+(function($){
+
+   $(function(){
+
+       $('input:text').setMask();
+       
+        /* Personalização para celulares de SP*/
+
+       $('#phone').keydown(function(event) {
+
+             // Act on the event
+
+             if($(this).val().substring(1,6) == '11) 9'){
+
+                 $(this).attr('alt','phone_sp');
+
+             }else{
+
+                 $(this).attr('alt','phone');
+
+            }
+
+           $(this).setMask();
+
+       });
+
+   });
+   $('#cpf').setMask('cpf');
+   $('#cep').setMask('cep');
+   $('#estado').setMask('state')
+
+})($);
+
+        $(".custom_select select").customSelect();
+        $("#new_resale").validate({
+            rules:{
+                "resale[name]":{
+                    required: true,
+                    minlength: 3
+                },
+                "resale[mail]": {
+                    required: true,
+                    email: true
+                },
+                "resale[cpf]": {
+                    required: true
+                },      
+                "resale[rg]": {
+                    required: true
+                },
+                "resale[phone]": {
+                    required: true
+                },
+                "resale[address]": {
+                    required: true
+                },
+                "resale[hood]": {
+                    required: true
+                },
+                "resale[cep]": {
+                    required: true
+                },      
+                "resale[city]": {
+                    required: true
+                },
+                "resale[state]": {
+                    required: true
+                },      
+                "resale[message]": {
+                    required: true
+                },
+                "resale[region]": {
+                    required: true
+                },                                                                                                                                      
+               /* conf_senha:{
+                    required: true,
+                    equalTo: "#senha"
+                },
+                                
+                termos: "required"
+                                */
+            },
+            messages:{
+                "resale[name]":{
+                    required: "",
+                    minlength: ""
+                },
+                "resale[mail]": {
+                    required: "",
+                    email: ""
+                },
+                "resale[cpf]": {
+                    required: ""
+                },
+                "resale[rg]": {
+                    required: ""
+                },
+                "resale[phone]": {
+                    required: ""
+                },
+                "resale[address]": {
+                    required: ""
+                },
+                "resale[hood]": {
+                    required: ""
+                },      
+                "resale[cep]": {
+                    required: ""
+                },
+                "resale[city]": {
+                    required: ""
+                },
+                "resale[state]": {
+                    required: ""
+                },                                                                                                                              
+                "resale[message]":{
+                    required: "",
+                },
+                "resale[region]":{
+                    required: "",
+                },
+                /*termos: "Para se cadastrar você deve aceitar os termos de uso."*/
+            }
+
+        });
+                
+                
+
+
+    // Only do anything if the browser does not support placeholders
+    if (!Modernizr.input.placeholder) {
+
+        // Format all elements with the placeholder attribute and insert it as a value
+        $('[placeholder]').each(function() {
+            if ($(this).val() == '') {
+                $(this).val($(this).attr('placeholder'));
+                $(this).addClass('placeholder');
+            }
+            $(this).focus(function() {
+                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
+                    $(this).val('');
+                    $(this).removeClass('placeholder');
+                }
+            }).blur(function() {
+                if($(this).val() == '') {
+                    $(this).val($(this).attr('placeholder'));
+                    $(this).addClass('placeholder');
+                }
+            });
+        });
+
+        // Clean up any placeholders if the form gets submitted
+        $('[placeholder]').parents('form').submit(function() {
+            $(this).find('[placeholder]').each(function() {
+                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
+                    $(this).val('');
+                }
+            });
+        });
+
+        // Clean up any placeholders if the page is refreshed
+        window.onbeforeunload = function() {
+            $('[placeholder]').each(function() {
+                if ($(this).val() == $(this).attr('placeholder') && $(this).hasClass('placeholder')) {
+                    $(this).val('');
+                }
+            });
+        };
+    }
+});
+</script>
   <div class="clear"></div> 

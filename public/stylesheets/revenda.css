@@ -142,7 +142,6 @@ input::-webkit-input-placeholder,::-webkit-input-placeholder, input::-moz-placeh
 	border:#F00 1px solid;
 }
 
-
 .enviar_field{
 	position:relative;
 	background-image:url(/images/bg_enviar_field.jpg);
